@@ -16,6 +16,14 @@ namespace Enumeracao.Entities
 
         }
 
+        public Order(int id, DateTime moment, OrderStatus status) {
+
+            _id = id;
+            _moment = moment;
+            _status = status;
+        
+        }
+
         //set e get(Encapsulamento Manual)
 
         public int GetId()
@@ -62,11 +70,15 @@ namespace Enumeracao.Entities
 
         public override string ToString()
         {
-            return _id
-                + ", "
-                + _moment
-                +", "
-                +_status;
+            return GetId().ToString() 
+                + ", " + GetMoment() 
+                + ", " 
+                + GetStatus();
+            /*return _id.ToString() 
+                + ", " 
+                + _moment 
+                + ", " 
+                + _status;*/
         }
     }
 }
