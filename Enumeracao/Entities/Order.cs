@@ -59,5 +59,14 @@ namespace Enumeracao.Entities
             _status = status;
 
         }
+
+        public override string ToString()
+        {
+            return _id
+                + ", "
+                + _moment
+                +", "
+                +_status;
+        }
     }
 }
